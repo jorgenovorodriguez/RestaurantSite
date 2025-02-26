@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-display: 'sans-serif';
+    --font-logo: 'Chango';
+    --breakpoint-3xl: 120rem;
+
+    --color-primary: #1a4d2e;
+    --color-secondary: #ff8c00;
+    --color-terciary: #063016;
+
+    --font-color-primary: #1a4d2e;
+    --font-color-secondary: #ff8c00;
+}
+
+@layer base {
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: #063016 #1a4d2e;
+    }
+
+    :is(h1, h2, h3, h4, h5, h6) {
+        text-wrap: balance;
+    }
+
+    p {
+        text-wrap: pretty;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+    @apply min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-100;
+}

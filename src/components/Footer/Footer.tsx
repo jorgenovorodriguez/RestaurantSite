@@ -38,7 +38,7 @@ const socialLinks = [
 const Footer: React.FC = () => {
     return (
         <footer className='bg-[#1a4d2e] text-white py-6'>
-            <div className='container mx-auto text-center grid grid-cols-1 md:grid-cols-2'>
+            <div className='container mx-auto text-center grid grid-cols-1 md:grid-cols-2 gap-2'>
                 <p className='pt-2 text-xs md:text-base'>
                     &copy;{content.footer.companyLabel}
                 </p>

@@ -6,7 +6,7 @@ import Menu from '../pages/Menu';
 const AppRoutes = () => {
     return (
         <Routes>
-            <Route path='/home' element={<Home />} />
+            <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/menu' element={<Menu />} />
         </Routes>

@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "image": "image 1.png",
+    "title": "Pork Desire",
+    "description": "Mixed Greens, Pork meat, Cucumber, Pickled Veggies, Cilantro, Crispy Shallots, Jalapeno.",
+    "buttonText": "Order now",
+    "speciality": true,
+    "info": {
+      "codProtein": 1,
+      "protein": "meat"
+    },
+    "price": 12.99,
+    "available": true
+  },
+  {
+    "id": 2,
+    "image": "image 2.png",
+    "title": "Hawaian Paradise",
+    "description": "Mixed Greens, Shirmps, Corn, Pineapple, Edamame, Purple Cabbage, Furikake, Fried Garlic.",
+    "buttonText": "Order now",
+    "speciality": true,
+    "info": {
+      "codProtein": 2,
+      "protein": "seafood"
+    },
+    "price": 14.99,
+    "available": true
+  },
+  {
+    "id": 3,
+    "image": "image 3.png",
+    "title": "California Love",
+    "description": "Mixed Greens, Seitan, Diced Tomatoes, Jicama, Corn, Cucumber, Mint, Crispy Shallots.",
+    "buttonText": "Order now",
+    "speciality": true,
+    "info": {
+      "codProtein": 3,
+      "protein": "vegan"
+    },
+    "price": 11.49,
+    "available": true
+  },
+  {
+    "id": 4,
+    "image": "image 1.png",
+    "title": "Spicy Chicken Delight",
+    "description": "Mixed Greens, Grilled Chicken, Avocado, Mango, Red Onion, Spicy Dressing, Crispy Bacon.",
+    "buttonText": "Order now",
+    "speciality": false,
+    "info": {
+      "codProtein": 1,
+      "protein": "meat"
+    },
+    "price": 13.49,
+    "available": true
+  },
+  {
+    "id": 5,
+    "image": "image 2.png",
+    "title": "Ocean Breeze",
+    "description": "Mixed Greens, Salmon, Cucumber, Seaweed, Avocado, Lemon, Sesame Seeds, Chili Flakes.",
+    "buttonText": "Order now",
+    "speciality": false,
+    "info": {
+      "codProtein": 2,
+      "protein": "seafood"
+    },
+    "price": 15.99,
+    "available": true
+  },
+  {
+    "id": 6,
+    "image": "image 3.png",
+    "title": "Green Bliss",
+    "description": "Mixed Greens, Tofu, Cucumber, Carrot, Edamame, Avocado, Ginger Dressing, Roasted Peanuts.",
+    "buttonText": "Order now",
+    "speciality": false,
+    "info": {
+      "codProtein": 3,
+      "protein": "vegan"
+    },
+    "price": 10.99,
+    "available": false
+  },
+  {
+    "id": 7,
+    "image": "image 1.png",
+    "title": "BBQ Chicken Feast",
+    "description": "Mixed Greens, Grilled BBQ Chicken, Corn, Avocado, Red Bell Peppers, Cilantro, BBQ Sauce.",
+    "buttonText": "Order now",
+    "speciality": false,
+    "info": {
+      "codProtein": 1,
+      "protein": "meat"
+    },
+    "price": 12.49,
+    "available": true
+  },
+  {
+    "id": 8,
+    "image": "image 2.png",
+    "title": "Tropical Salmon",
+    "description": "Mixed Greens, Grilled Salmon, Pineapple, Cucumber, Red Onion, Sesame Dressing, Toasted Coconut.",
+    "buttonText": "Order now",
+    "speciality": false,
+    "info": {
+      "codProtein": 2,
+      "protein": "seafood"
+    },
+    "price": 16.49,
+    "available": false
+  },
+  {
+    "id": 9,
+    "image": "image 3.png",
+    "title": "Vegan Rainbow",
+    "description": "Mixed Greens, Roasted Chickpeas, Beetroot, Cucumber, Quinoa, Avocado, Tahini Dressing.",
+    "buttonText": "Order now",
+    "speciality": false,
+    "info": {
+      "codProtein": 3,
+      "protein": "vegan"
+    },
+    "price": 11.99,
+    "available": true
+  }
+]
+
+  

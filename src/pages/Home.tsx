@@ -1,10 +1,13 @@
 import CardWrapper from '../components/Card/CardWrapper';
 import Hero from '../components/Hero/Hero';
 import Location from '../components/Location/Location';
-import specialitiesMock from '../data/specialitiesMock.json';
+import menuMock from '../data/menuMock.json';
+import { MenuProps } from '../interfaces/interfaces';
 import { content } from '../utils/content';
 
 const Home: React.FC = () => {
+    const specialities: MenuProps = menuMock.filter((item) => item.speciality);
+
     return (
         <>
             <Hero image='home_image.png' />
@@ -17,7 +20,7 @@ const Home: React.FC = () => {
                         {content.specialities.description}
                     </p>
                 </div>
-                <CardWrapper data={specialitiesMock} />
+                <CardWrapper data={specialities} />
                 <Location />
             </div>
         </>

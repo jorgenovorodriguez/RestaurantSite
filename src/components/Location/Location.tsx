@@ -35,7 +35,7 @@ const Location: React.FC = () => {
                             <GoogleMap
                                 mapContainerStyle={{
                                     width: '100%',
-                                    height: '100%',
+                                    height: '400px',
                                 }}
                                 center={coordinates}
                                 zoom={12}

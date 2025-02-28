@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         html.classList.toggle("dark", systemPrefersDark);
     }
+    console.log(savedTheme, themeToggle);
+    
 
     if (themeToggle) {
         themeToggle.addEventListener("click", () => {

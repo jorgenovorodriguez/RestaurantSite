@@ -30,17 +30,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             <div className='w-full max-w-[600px] text-center flex flex-col items-center'>
-                <h2 className='text-4xl md:text-6xl lg:text-9xl font-bold text-primary'>
+                <h2 className='text-4xl md:text-6xl lg:text-9xl font-bold text-primaryText'>
                     {title}
                 </h2>
-                <p className='text-base md:text-2xl text-primary mt-4'>
+                <p className='text-base md:text-2xl text-primaryText mt-4'>
                     {text}
                 </p>
 
                 {buttonText && (
                     <button
                         onClick={onButtonClick}
-                        className='mt-6 px-6 py-2 lg:text-2xl bg-blue-600 text-primary rounded-lg hover:bg-blue-700 transition'
+                        className='mt-6 px-6 py-2 lg:text-2xl bg-blue-600 text-primaryText rounded-lg hover:bg-blue-700 transition'
                     >
                         {buttonText}
                     </button>

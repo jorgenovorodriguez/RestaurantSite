@@ -2,7 +2,7 @@ import { CustomButtonProps } from '../../interfaces/interfaces';
 
 const CustomButton: React.FC<CustomButtonProps> = ({
     buttonText,
-    buttonTextColor = 'text-primary',
+    buttonTextColor = 'text-primaryText',
     buttonColor = 'bg-button',
     buttonColorHover = 'hover:bg-blue-700 dark:hover:bg-blue-900',
     disabled = false,

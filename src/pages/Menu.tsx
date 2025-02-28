@@ -1,12 +1,14 @@
-import CardWrapper from '../components/Card/CardWrapper';
-import HeroSection from '../components/HeroTwo/HeroTwo';
+import React from 'react';
 import { content } from '../utils/content';
 import menuMock from '../data/menuMock.json';
-import React, { useState } from 'react';
+import { useFilter } from '../context/FilterContext';
 import { MenuProps } from '../interfaces/interfaces';
+import CardWrapper from '../components/Card/CardWrapper';
+import HeroSection from '../components/HeroTwo/HeroTwo';
 
 const Menu: React.FC = () => {
-    const [selectedProtein, setSelectedProtein] = useState<number | null>(null);
+    const { selectedProtein, setSelectedProtein } = useFilter();
+    console.log(selectedProtein);
 
     const filteredData: MenuProps = selectedProtein
         ? menuMock.filter((item) => item.info.codProtein === selectedProtein)
@@ -36,13 +38,14 @@ const Menu: React.FC = () => {
                                             isActive ? null : proteinValue
                                         )
                                     }
-                                    className='relative text-2xl font-medium transition-all duration-300 ease-in-out 
-                                           after:content-[""] after:absolute after:left-0 after:bottom-0 
-                                           after:w-0 after:h-[2px] after:bg-black dark:after:bg-[#bababa] after:transition-all 
-                                           after:duration-300 after:ease-in-out 
-                                           hover:after:w-full 
-                                           focus:after:w-full 
-                                           active:after:w-full text-primary'
+                                    className={`relative text-2xl font-medium transition-all duration-300 ease-in-out 
+                                        after:content-[""] after:absolute after:left-0 after:bottom-0 
+                                        after:w-0 after:h-[2px] after:bg-secondary dark:after:bg-[#bababa] 
+                                        after:transition-all after:duration-300 after:ease-in-out 
+                                        hover:after:w-full focus:after:w-full active:after:w-full 
+                                        text-secondaryText ${
+                                            isActive ? 'after:w-full' : ''
+                                        }`}
                                 >
                                     {value}
                                 </button>

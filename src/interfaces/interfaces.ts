@@ -58,3 +58,9 @@ export interface MenuItem {
 }
 
 export type MenuProps = MenuItem[];
+
+export interface FilterContextProps {
+    selectedProtein: number | null;
+    setSelectedProtein: (protein: number | null) => void;
+}
+

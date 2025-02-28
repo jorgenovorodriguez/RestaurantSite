@@ -8,10 +8,10 @@ const Hero: React.FC<HeroProps> = ({ image }) => {
     return (
         <div className='text-center min-h-screen bg-primary  pt-[2rem] 3xl:pt-[8rem]'>
             <div>
-                <h1 className='font-bold p-[1rem] text-5xl md:text-6xl lg:text-8xl lg:px-[5rem] md:pt-[5rem] lg:pt-[0rem] text-primary'>
+                <h1 className='font-bold p-[1rem] text-5xl md:text-6xl lg:text-8xl lg:px-[5rem] md:pt-[5rem] lg:pt-[0rem] text-primaryText'>
                     {content.hero.title}
                 </h1>
-                <p className='text-primary font-bold text-xl'>
+                <p className='text-primaryText font-bold text-xl'>
                     {content.hero.subTitle}
                 </p>
             </div>

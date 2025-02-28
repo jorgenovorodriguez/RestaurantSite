@@ -10,8 +10,8 @@ import {
 const Location: React.FC = () => {
     const data: LocationDataProps = locationMock;
     const coordinates: CoordinatesProps = {
-        lat: 40.748817,
-        lng: -73.985428,
+        lat: 39.2337,
+        lng: -84.552,
     };
     const apiKey: string = import.meta.env.VITE_MAPS_API_KEY;
     const { isVisible, elementRef } = useVisibilityOnScroll();
@@ -24,11 +24,11 @@ const Location: React.FC = () => {
             }`}
         >
             <div className='text-center lg:w-1/2 p-[1rem]'>
-                <h1 className='mb-[1rem] font-bold text-4xl text-primary'>
+                <h1 className='mb-[1rem] font-bold text-4xl '>
                     {content.location.title}
                 </h1>
             </div>
-            <div className='bg-primary shadow-primary shadow-xl rounded-lg overflow-hidden w-80 md:w-full'>
+            <div className='bg-primary shadow-shadow shadow-xl rounded-lg overflow-hidden w-80 md:w-full'>
                 <div className='lg:grid grid-cols-2'>
                     <div>
                         <LoadScript googleMapsApiKey={apiKey}>
@@ -47,22 +47,22 @@ const Location: React.FC = () => {
                     <div>
                         <div className='p-4 grid md:grid-cols-2 gap-4 '>
                             <div>
-                                <h2 className='font-bold text-xl lg:text-2xl text-primary mt-4 md:mt-0'>
+                                <h2 className='font-bold text-xl lg:text-2xl text-primaryText mt-4 md:mt-0'>
                                     {content.location.contactLabel}
                                 </h2>
-                                <p className='mt-2 text-primary'>
+                                <p className='mt-2 text-primaryText'>
                                     <strong>
                                         {content.location.addressLabel}
                                     </strong>{' '}
                                     {data.address}
                                 </p>
-                                <p className='text-primary'>
+                                <p className='text-primaryText'>
                                     <strong>
                                         {content.location.phoneLabel}
                                     </strong>{' '}
                                     {data.phone}
                                 </p>
-                                <p className='text-primary'>
+                                <p className='text-primaryText'>
                                     <strong>
                                         {content.location.emailLabel}
                                     </strong>{' '}
@@ -70,10 +70,10 @@ const Location: React.FC = () => {
                                 </p>
                             </div>
                             <div>
-                                <h3 className='font-semibold text-lg lg:text-2xl text-primary mt-4 md:mt-0'>
+                                <h3 className='font-semibold text-lg lg:text-2xl text-primaryText mt-4 md:mt-0'>
                                     {content.location.scheduleLabel}
                                 </h3>
-                                <ul className='mt-2 text-primary'>
+                                <ul className='mt-2 text-primaryText'>
                                     {data.schedule.map((item, index) => (
                                         <li
                                             key={index}

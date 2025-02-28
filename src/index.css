@@ -8,12 +8,13 @@
     --color-primary: #1a4d2e;
     --color-secondary: #ff8c00;
     --color-terciary: #063016;
-    --color-button: blue-600;
+    --color-button: #2563eb;
+    --color-card: #fff;
 
-    --text-color-primary: #1a4d2e;
-    --text-color-secondary: #ff8c00;
+    --text-color-primaryText: #f3f4f6;
+    --text-color-secondaryText: #1a4d2e;
 
-    --color-shadow-primary: #fff;
+    --color-shadow: #212121;
 }
 
 @layer base {
@@ -40,7 +41,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-    @apply min-h-screen bg-zinc-50 dark:bg-[#282a36] text-zinc-800 dark:text-zinc-100;
+    @apply min-h-screen bg-zinc-50 dark:bg-[#282a36] text-zinc-700 dark:text-zinc-300;
 }
 
 .dark {
@@ -48,11 +49,12 @@ body {
     --color-secondary: #1a1a2e;
     --color-terciary: #212121;
     --color-button: #021a44;
+    --color-card: #101828;
 
-    --text-color-primary: #bababa;
-    --text-color-secondary: #fff;
+    --text-color-primaryText: #bababa;
+    --text-color-secondaryText: #bababa;
 
-    --color-shadow-primary: #262a45;
+    --color-shadow: #101828;
 
     scrollbar-width: thin;
     scrollbar-color: #262a45 #101828;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getImageUrl } from '../../utils/helpers';
+import { getAssetImageUrl } from '../../utils/helpers';
 import { CardProps } from '../../interfaces/interfaces';
 import CustomButton from '../Button/CustomButton';
 import { content } from '../../utils/content';
@@ -15,18 +15,18 @@ const Card: React.FC<CardProps> = ({
 }) => {
     const { isVisible, elementRef } = useVisibilityOnScroll();
 
-    const imageUrl = getImageUrl(image);
+    const imageUrl = getAssetImageUrl(image);
 
+    const cardOpacity = isVisible
+        ? !available
+            ? 'opacity-50 pointer-events-none'
+            : 'opacity-100 translate-y-0'
+        : 'opacity-0 translate-y-10';
     return (
         <div
             ref={elementRef}
-            className={`flex flex-col w-full max-w-xs mx-auto bg-primary shadow-primary shadow-xl rounded-2xl overflow-hidden md:max-w-sm lg:max-w-md transform transition-all duration-700 ease-in-out
-                ${!available ? 'opacity-50 pointer-events-none' : ''}
-                ${
-                    isVisible
-                        ? 'opacity-100 translate-y-0'
-                        : 'opacity-0 translate-y-10'
-                }
+            className={`flex flex-col w-full max-w-xs mx-auto bg-card shadow-shadow shadow-xl rounded-2xl overflow-hidden md:max-w-sm lg:max-w-md transform transition-all duration-700 ease-in-out
+                ${cardOpacity}
             `}
         >
             <img

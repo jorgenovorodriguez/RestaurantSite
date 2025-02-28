@@ -26,11 +26,12 @@ const Header = () => {
                                 : `/${item.toLowerCase()}`
                         }
                         onClick={() => handleNavClick(item)}
-                        className={`relative text-white text-lg font-medium
+                        className={`relative text-primary text-lg font-medium
                             after:content-[""]
                             after:absolute after:left-0 after:bottom-[-2px]
                             after:w-0 after:h-[2px] after:bg-white
                             after:transition-all after:duration-300
+                            dark:after:bg-[#bababa]
                             ${
                                 isActive ? 'after:w-full' : 'hover:after:w-full'
                             }`}
@@ -43,15 +44,15 @@ const Header = () => {
     };
 
     return (
-        <header className='flex justify-between items-center p-4 bg-[#1a4d2e] text-white border-b sticky top-0 z-50'>
-            <h1 className='text-xl font-bold font-logo'>
+        <header className='flex justify-between items-center p-4 bg-primary text-primary border-b sticky top-0 z-50'>
+            <h1 className='text-xl font-bold font-logo text-primary'>
                 {content.header.title}
             </h1>
             <nav>
                 <div className='md:hidden'>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className='text-white focus:outline-none'
+                        className='text-primary focus:outline-none'
                     >
                         ☰
                     </button>
@@ -66,7 +67,7 @@ const Header = () => {
                     >
                         <button
                             onClick={() => setIsOpen(false)}
-                            className='absolute top-4 right-4 text-white text-3xl'
+                            className='absolute top-4 right-4 text-primary text-3xl'
                         >
                             &times;
                         </button>

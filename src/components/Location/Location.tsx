@@ -24,11 +24,11 @@ const Location: React.FC = () => {
             }`}
         >
             <div className='text-center lg:w-1/2 p-[1rem]'>
-                <h1 className='mb-[1rem] font-bold text-4xl'>
+                <h1 className='mb-[1rem] font-bold text-4xl text-primary'>
                     {content.location.title}
                 </h1>
             </div>
-            <div className='bg-white shadow-xl rounded-lg overflow-hidden w-80 md:w-full'>
+            <div className='bg-primary shadow-primary shadow-xl rounded-lg overflow-hidden w-80 md:w-full'>
                 <div className='lg:grid grid-cols-2'>
                     <div>
                         <LoadScript googleMapsApiKey={apiKey}>
@@ -47,22 +47,22 @@ const Location: React.FC = () => {
                     <div>
                         <div className='p-4 grid md:grid-cols-2 gap-4 '>
                             <div>
-                                <h2 className='font-bold text-xl lg:text-2xl text-gray-900 mt-4 md:mt-0'>
+                                <h2 className='font-bold text-xl lg:text-2xl text-primary mt-4 md:mt-0'>
                                     {content.location.contactLabel}
                                 </h2>
-                                <p className='mt-2 text-gray-700'>
+                                <p className='mt-2 text-primary'>
                                     <strong>
                                         {content.location.addressLabel}
                                     </strong>{' '}
                                     {data.address}
                                 </p>
-                                <p className='text-gray-700'>
+                                <p className='text-primary'>
                                     <strong>
                                         {content.location.phoneLabel}
                                     </strong>{' '}
                                     {data.phone}
                                 </p>
-                                <p className='text-gray-700'>
+                                <p className='text-primary'>
                                     <strong>
                                         {content.location.emailLabel}
                                     </strong>{' '}
@@ -70,10 +70,10 @@ const Location: React.FC = () => {
                                 </p>
                             </div>
                             <div>
-                                <h3 className='font-semibold text-lg lg:text-2xl text-gray-900 mt-4 md:mt-0'>
+                                <h3 className='font-semibold text-lg lg:text-2xl text-primary mt-4 md:mt-0'>
                                     {content.location.scheduleLabel}
                                 </h3>
-                                <ul className='mt-2 text-gray-700'>
+                                <ul className='mt-2 text-primary'>
                                     {data.schedule.map((item, index) => (
                                         <li
                                             key={index}

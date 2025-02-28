@@ -8,9 +8,12 @@
     --color-primary: #1a4d2e;
     --color-secondary: #ff8c00;
     --color-terciary: #063016;
+    --color-button: blue-600;
 
-    --font-color-primary: #1a4d2e;
-    --font-color-secondary: #ff8c00;
+    --text-color-primary: #1a4d2e;
+    --text-color-secondary: #ff8c00;
+
+    --color-shadow-primary: #fff;
 }
 
 @layer base {
@@ -37,5 +40,17 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
-    @apply min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-100;
+    @apply min-h-screen bg-zinc-50 dark:bg-[#282a36] text-zinc-800 dark:text-zinc-100;
+}
+
+.dark {
+    --color-primary: #101828;
+    --color-secondary: #1a1a2e;
+    --color-terciary: #212121;
+    --color-button: #021a44;
+
+    --text-color-primary: #bababa;
+    --text-color-secondary: #fff;
+
+    --color-shadow-primary: #262a45;
 }

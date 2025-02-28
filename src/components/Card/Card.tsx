@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({
     return (
         <div
             ref={elementRef}
-            className={`flex flex-col w-full max-w-xs mx-auto bg-white shadow-xl rounded-2xl overflow-hidden md:max-w-sm lg:max-w-md transform transition-all duration-700 ease-in-out
+            className={`flex flex-col w-full max-w-xs mx-auto bg-primary shadow-primary shadow-xl rounded-2xl overflow-hidden md:max-w-sm lg:max-w-md transform transition-all duration-700 ease-in-out
                 ${!available ? 'opacity-50 pointer-events-none' : ''}
                 ${
                     isVisible
@@ -33,6 +33,7 @@ const Card: React.FC<CardProps> = ({
                 src={imageUrl}
                 alt={title}
                 className='w-full h-48 object-contain'
+                loading='lazy'
             />
             <div className='p-4 flex flex-col flex-grow text-center'>
                 <div className='flex justify-center items-center'>

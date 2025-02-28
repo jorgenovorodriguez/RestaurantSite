@@ -38,11 +38,11 @@ const Menu: React.FC = () => {
                                     }
                                     className='relative text-2xl font-medium transition-all duration-300 ease-in-out 
                                            after:content-[""] after:absolute after:left-0 after:bottom-0 
-                                           after:w-0 after:h-[2px] after:bg-black after:transition-all 
+                                           after:w-0 after:h-[2px] after:bg-black dark:after:bg-[#bababa] after:transition-all 
                                            after:duration-300 after:ease-in-out 
                                            hover:after:w-full 
                                            focus:after:w-full 
-                                           active:after:w-full'
+                                           active:after:w-full text-primary'
                                 >
                                     {value}
                                 </button>

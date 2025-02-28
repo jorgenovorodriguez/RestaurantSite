@@ -12,8 +12,8 @@ const Home: React.FC = () => {
         <>
             <Hero image='home_image.png' />
             <div className='flex flex-col items-center justify-center'>
-                <div className='text-center lg:w-1/2 p-[1rem]'>
-                    <h1 className='mb-[1rem] font-bold md:text-4xl'>
+                <div className='text-center lg:w-1/2 p-[1rem] text-primary'>
+                    <h1 className='mb-[1rem] font-bold md:text-4xl '>
                         {content.specialities.title}
                     </h1>
                     <p className='text-xs md:text-xl'>

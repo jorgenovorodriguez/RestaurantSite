@@ -79,7 +79,7 @@ const Header = () => {
                 </div>
 
                 <div
-                    className={`fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.90)] z-40
+                    className={`fixed top-0 right-0 w-full md:w-1/4 h-full bg-[rgba(0,0,0,0.9)] md:bg-[rgba(0,0,0,0.7)] z-40
                         transform ${
                             dropdownType
                                 ? 'scale-y-100 opacity-100'

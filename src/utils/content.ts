@@ -25,11 +25,11 @@ export const content = {
     menu: {
       title: "Our Menu",
       description: 'We are a young, passionate team with a love for fresh, wholesome food and a deep respect for the environment. We bring a modern twist to traditional Vietnamese cuisine, creating nourishing bowls packed with vibrant flavors and sustainable ingredients. ',
-      buttonText: "Order Now",
       filterItems: ['All', 'Meat', 'Seafood', 'Vegan'],
       availabilityLabel: 'Not available'
     },
     about: {
+      title: "About Us",
       description: 'We are a young, passionate team with a love for fresh, wholesome food and a deep respect for the environment. We bring a modern twist to traditional Vietnamese cuisine, creating nourishing bowls packed with vibrant flavors and sustainable ingredients. '
     },
     notFound: {

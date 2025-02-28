@@ -64,3 +64,9 @@ export interface FilterContextProps {
     setSelectedProtein: (protein: number | null) => void;
 }
 
+export interface HeroSectionProps {
+    image: string;
+    title?: string;
+    text: string;
+}
+

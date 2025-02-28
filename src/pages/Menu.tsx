@@ -4,11 +4,10 @@ import menuMock from '../data/menuMock.json';
 import { useFilter } from '../context/FilterContext';
 import { MenuProps } from '../interfaces/interfaces';
 import CardWrapper from '../components/Card/CardWrapper';
-import HeroSection from '../components/HeroTwo/HeroTwo';
+import HeroSection from '../components/HeroSection/HeroSection';
 
 const Menu: React.FC = () => {
     const { selectedProtein, setSelectedProtein } = useFilter();
-    console.log(selectedProtein);
 
     const filteredData: MenuProps = selectedProtein
         ? menuMock.filter((item) => item.info.codProtein === selectedProtein)
@@ -20,7 +19,6 @@ const Menu: React.FC = () => {
                 image='menu_image.png'
                 title={content.menu.title}
                 text={content.menu.description}
-                buttonText={content.menu.buttonText}
             />
 
             <div className='flex flex-col items-center justify-center p-8'>
@@ -40,7 +38,7 @@ const Menu: React.FC = () => {
                                     }
                                     className={`relative text-2xl font-medium transition-all duration-300 ease-in-out 
                                         after:content-[""] after:absolute after:left-0 after:bottom-0 
-                                        after:w-0 after:h-[2px] after:bg-secondary dark:after:bg-[#bababa] 
+                                        after:w-0 after:h-[2px] after:bg-primary  dark:after:bg-[#bababa] 
                                         after:transition-all after:duration-300 after:ease-in-out 
                                         hover:after:w-full focus:after:w-full active:after:w-full 
                                         text-secondaryText ${

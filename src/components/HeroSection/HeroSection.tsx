@@ -1,21 +1,8 @@
 import React from 'react';
 import { getImageUrl } from '../../utils/helpers';
+import { HeroSectionProps } from '../../interfaces/interfaces';
 
-interface HeroSectionProps {
-    image: string;
-    title?: string;
-    text: string;
-    buttonText?: string;
-    onButtonClick?: () => void;
-}
-
-const HeroSection: React.FC<HeroSectionProps> = ({
-    image,
-    title,
-    text,
-    buttonText,
-    onButtonClick,
-}) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ image, title, text }) => {
     const imageUrl = getImageUrl(image);
 
     return (
@@ -36,15 +23,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 <p className='text-base md:text-2xl text-primaryText mt-4'>
                     {text}
                 </p>
-
-                {buttonText && (
-                    <button
-                        onClick={onButtonClick}
-                        className='mt-6 px-6 py-2 lg:text-2xl bg-blue-600 text-primaryText rounded-lg hover:bg-blue-700 transition'
-                    >
-                        {buttonText}
-                    </button>
-                )}
             </div>
         </section>
     );

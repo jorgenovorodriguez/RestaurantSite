@@ -53,4 +53,7 @@ body {
     --text-color-secondary: #fff;
 
     --color-shadow-primary: #262a45;
+
+    scrollbar-width: thin;
+    scrollbar-color: #262a45 #101828;
 }

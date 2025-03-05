@@ -1,6 +1,7 @@
 import { HeroProps } from '../../interfaces/interfaces';
 import { getImageUrl } from '../../utils/helpers';
 import { content } from '../../utils/content';
+import { t } from 'i18next';
 
 const Hero: React.FC<HeroProps> = ({ image }) => {
     const imageUrl = getImageUrl(image);
@@ -9,10 +10,10 @@ const Hero: React.FC<HeroProps> = ({ image }) => {
         <div className='text-center min-h-screen bg-primary pt-[2rem] 3xl:pt-[4rem]'>
             <div>
                 <h1 className='font-bold p-[1rem] text-5xl md:text-6xl lg:text-8xl lg:px-[5rem] md:pt-[5rem] lg:pt-[0rem] text-primaryText'>
-                    {content.hero.title}
+                    {t(content.hero.title)}
                 </h1>
                 <p className='text-primaryText font-bold text-xl'>
-                    {content.hero.subTitle}
+                    {t(content.hero.subTitle)}
                 </p>
             </div>
             <img

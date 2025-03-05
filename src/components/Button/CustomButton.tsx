@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import { CustomButtonProps } from '../../interfaces/interfaces';
 
 const CustomButton: React.FC<CustomButtonProps> = ({
@@ -12,7 +13,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
             className={`mt-4 w-1/2 mx-auto py-2 rounded-lg transition ${buttonTextColor} ${buttonColor} ${buttonColorHover} `}
             disabled={disabled}
         >
-            {buttonText}
+            {t(buttonText)}
         </button>
     );
 };

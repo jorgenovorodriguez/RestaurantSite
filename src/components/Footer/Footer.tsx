@@ -6,6 +6,7 @@ import {
     FaTwitter,
 } from 'react-icons/fa';
 import { content } from '../../utils/content';
+import { t } from 'i18next';
 
 const socialLinks = [
     {
@@ -40,7 +41,7 @@ const Footer: React.FC = () => {
         <footer className='bg-primary text-primaryText py-6'>
             <div className='container mx-auto text-center grid grid-cols-1 md:grid-cols-2 gap-2'>
                 <p className='pt-2 text-xs md:text-base'>
-                    &copy;{content.footer.companyLabel}
+                    &copy;{t(content.footer.companyLabel)}
                 </p>
 
                 <div className='flex justify-center space-x-6'>

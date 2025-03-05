@@ -5,6 +5,7 @@ import { useFilter } from '../context/FilterContext';
 import { MenuProps } from '../interfaces/interfaces';
 import CardWrapper from '../components/Card/CardWrapper';
 import HeroSection from '../components/HeroSection/HeroSection';
+import { t } from 'i18next';
 
 const Menu: React.FC = () => {
     const { selectedProtein, setSelectedProtein } = useFilter();
@@ -17,8 +18,8 @@ const Menu: React.FC = () => {
         <>
             <HeroSection
                 image='menu_image.png'
-                title={content.menu.title}
-                text={content.menu.description}
+                title={t(content.menu.title)}
+                text={t(content.menu.description)}
             />
 
             <div className='flex flex-col items-center justify-center p-8'>
@@ -45,7 +46,7 @@ const Menu: React.FC = () => {
                                             isActive ? 'after:w-full' : ''
                                         }`}
                                 >
-                                    {value}
+                                    {t(value)}
                                 </button>
                             );
                         }

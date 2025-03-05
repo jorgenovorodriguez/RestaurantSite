@@ -4,6 +4,7 @@ import { CardProps } from '../../interfaces/interfaces';
 import CustomButton from '../Button/CustomButton';
 import { content } from '../../utils/content';
 import useVisibilityOnScroll from '../../Hooks/useVisibilityOnScroll';
+import { t } from 'i18next';
 
 const Card: React.FC<CardProps> = ({
     image,
@@ -40,11 +41,13 @@ const Card: React.FC<CardProps> = ({
                     <h2 className='text-lg font-semibold'>{`${title}. ${price}€`}</h2>
                 </div>
                 <p className='text-sm mt-2 flex-grow flex items-center justify-center'>
-                    {description}
+                    {t(description)}
                 </p>
                 <CustomButton
                     buttonText={
-                        available ? buttonText : content.menu.availabilityLabel
+                        available
+                            ? t(buttonText)
+                            : t(content.menu.availabilityLabel)
                     }
                     disabled={!available}
                 />

@@ -3,6 +3,7 @@ import { content } from '../../utils/content';
 import { Link } from 'react-router-dom';
 import { IoSettingsSharp } from 'react-icons/io5';
 import ThemeToggle from '../ThemeToggle/ThemeToogle';
+import { t } from 'i18next';
 
 const Header = () => {
     const [dropdownType, setDropdownType] = useState<
@@ -34,7 +35,7 @@ const Header = () => {
                         dark:after:bg-[#bababa]
                         hover:after:w-full`}
                 >
-                    {item}
+                    {t(item)}
                 </Link>
             </li>
         ));
@@ -72,7 +73,7 @@ const Header = () => {
                 <div className='relative order-2'>
                     <button
                         onClick={() => toggleDropdown('settings')}
-                        className='text-xl md:text-2xl text-primaryText focus:outline-none pt-2'
+                        className='text-xl md:text-2xl text-primaryText focus:outline-none pt-1 md:pt-2'
                     >
                         <IoSettingsSharp />
                     </button>

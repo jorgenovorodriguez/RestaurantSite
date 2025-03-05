@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import CardWrapper from '../components/Card/CardWrapper';
 import Hero from '../components/Hero/Hero';
 import Location from '../components/Location/Location';
@@ -14,10 +15,10 @@ const Home: React.FC = () => {
             <div className='flex flex-col items-center justify-center'>
                 <div className='text-center lg:w-1/2 p-[1rem] '>
                     <h1 className='mb-[1rem] font-bold text-2xl md:text-4xl'>
-                        {content.specialities.title}
+                        {t(content.specialities.title)}
                     </h1>
                     <p className='text-lg md:text-2xl'>
-                        {content.specialities.description}
+                        {t(content.specialities.description)}
                     </p>
                 </div>
                 <CardWrapper data={specialities} />

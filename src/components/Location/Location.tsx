@@ -1,6 +1,7 @@
 import locationMock from '../../data/locationMock.json';
+import { useEffect, useState } from 'react';
 import { content } from '../../utils/content';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, Marker } from '@react-google-maps/api';
 import useVisibilityOnScroll from '../../Hooks/useVisibilityOnScroll';
 import {
     CoordinatesProps,
@@ -13,8 +14,38 @@ const Location: React.FC = () => {
         lat: 39.2337,
         lng: -84.552,
     };
-    const apiKey: string = import.meta.env.VITE_MAPS_API_KEY;
     const { isVisible, elementRef } = useVisibilityOnScroll();
+    const [isDarkMode, setIsDarkMode] = useState(
+        document.documentElement.classList.contains('dark')
+    );
+
+    useEffect(() => {
+        const observer = new MutationObserver(() => {
+            setIsDarkMode(document.documentElement.classList.contains('dark'));
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['class'],
+        });
+        return () => observer.disconnect();
+    }, []);
+
+    const mapDarkMode = [
+        { elementType: 'geometry', stylers: [{ color: '#212121' }] },
+        { elementType: 'labels.text.stroke', stylers: [{ color: '#212121' }] },
+        { elementType: 'labels.text.fill', stylers: [{ color: '#757575' }] },
+        {
+            featureType: 'road',
+            elementType: 'geometry',
+            stylers: [{ color: '#383838' }],
+        },
+        {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [{ color: '#000000' }],
+        },
+    ];
 
     return (
         <div
@@ -31,18 +62,20 @@ const Location: React.FC = () => {
             <div className='bg-primary shadow-shadow shadow-xl rounded-lg overflow-hidden w-80 md:w-full'>
                 <div className='lg:grid grid-cols-2'>
                     <div>
-                        <LoadScript googleMapsApiKey={apiKey}>
-                            <GoogleMap
-                                mapContainerStyle={{
-                                    width: '100%',
-                                    height: '400px',
-                                }}
-                                center={coordinates}
-                                zoom={12}
-                            >
-                                <Marker position={coordinates} />
-                            </GoogleMap>
-                        </LoadScript>
+                        <GoogleMap
+                            mapContainerStyle={{
+                                width: '100%',
+                                height: '400px',
+                            }}
+                            center={coordinates}
+                            zoom={12}
+                            options={{
+                                styles: isDarkMode ? mapDarkMode : [],
+                                disableDefaultUI: true,
+                            }}
+                        >
+                            <Marker position={coordinates} />
+                        </GoogleMap>
                     </div>
                     <div>
                         <div className='p-4 grid md:grid-cols-2 gap-4 '>

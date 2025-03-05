@@ -18,6 +18,7 @@ const Hero: React.FC<HeroProps> = ({ image }) => {
             <img
                 src={imageUrl}
                 alt={content.hero.title}
+                loading='lazy'
                 className='w-full h-auto max-h-[60vh] object-contain p-[2rem]  px-[2rem]'
             />
         </div>

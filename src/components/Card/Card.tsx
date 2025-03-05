@@ -4,7 +4,7 @@ import { CardProps } from '../../interfaces/interfaces';
 import CustomButton from '../Button/CustomButton';
 import { content } from '../../utils/content';
 import useVisibilityOnScroll from '../../Hooks/useVisibilityOnScroll';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const Card: React.FC<CardProps> = ({
     image,
@@ -14,6 +14,7 @@ const Card: React.FC<CardProps> = ({
     price,
     available,
 }) => {
+    const { i18n } = useTranslation();
     const { isVisible, elementRef } = useVisibilityOnScroll();
 
     const imageUrl = getAssetImageUrl(image);
@@ -41,13 +42,13 @@ const Card: React.FC<CardProps> = ({
                     <h2 className='text-lg font-semibold'>{`${title}. ${price}€`}</h2>
                 </div>
                 <p className='text-sm mt-2 flex-grow flex items-center justify-center'>
-                    {t(description)}
+                    {i18n.t(description)}
                 </p>
                 <CustomButton
                     buttonText={
                         available
-                            ? t(buttonText)
-                            : t(content.menu.availabilityLabel)
+                            ? i18n.t(buttonText)
+                            : i18n.t(content.menu.availabilityLabel)
                     }
                     disabled={!available}
                 />

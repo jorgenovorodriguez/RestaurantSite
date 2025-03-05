@@ -3,9 +3,12 @@ import { content } from '../../utils/content';
 import { Link } from 'react-router-dom';
 import { IoSettingsSharp } from 'react-icons/io5';
 import ThemeToggle from '../ThemeToggle/ThemeToogle';
-import { t } from 'i18next';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+    const { i18n } = useTranslation();
+
     const [dropdownType, setDropdownType] = useState<
         'menu' | 'settings' | null
     >(null);
@@ -35,7 +38,7 @@ const Header = () => {
                         dark:after:bg-[#bababa]
                         hover:after:w-full`}
                 >
-                    {t(item)}
+                    {i18n.t(item)}
                 </Link>
             </li>
         ));
@@ -102,8 +105,9 @@ const Header = () => {
                                 </ul>
                             ) : (
                                 <div className='flex items-center justify-center h-full w-full'>
-                                    <div className='w-1/2'>
+                                    <div className='w-70 grid gap-6'>
                                         <ThemeToggle />
+                                        <LanguageSwitcher />
                                     </div>
                                 </div>
                             )}

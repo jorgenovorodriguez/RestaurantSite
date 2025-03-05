@@ -5,10 +5,11 @@ import { useFilter } from '../context/FilterContext';
 import { MenuProps } from '../interfaces/interfaces';
 import CardWrapper from '../components/Card/CardWrapper';
 import HeroSection from '../components/HeroSection/HeroSection';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const Menu: React.FC = () => {
     const { selectedProtein, setSelectedProtein } = useFilter();
+    const { i18n } = useTranslation();
 
     const filteredData: MenuProps = selectedProtein
         ? menuMock.filter((item) => item.info.codProtein === selectedProtein)
@@ -18,8 +19,8 @@ const Menu: React.FC = () => {
         <>
             <HeroSection
                 image='menu_image.png'
-                title={t(content.menu.title)}
-                text={t(content.menu.description)}
+                title={i18n.t(content.menu.title)}
+                text={i18n.t(content.menu.description)}
             />
 
             <div className='flex flex-col items-center justify-center p-8'>
@@ -46,7 +47,7 @@ const Menu: React.FC = () => {
                                             isActive ? 'after:w-full' : ''
                                         }`}
                                 >
-                                    {t(value)}
+                                    {i18n.t(value)}
                                 </button>
                             );
                         }

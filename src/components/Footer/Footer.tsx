@@ -6,7 +6,7 @@ import {
     FaTwitter,
 } from 'react-icons/fa';
 import { content } from '../../utils/content';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const socialLinks = [
     {
@@ -37,11 +37,13 @@ const socialLinks = [
 ];
 
 const Footer: React.FC = () => {
+    const { i18n } = useTranslation();
+
     return (
         <footer className='bg-primary text-primaryText py-6'>
             <div className='container mx-auto text-center grid grid-cols-1 md:grid-cols-2 gap-2'>
                 <p className='pt-2 text-xs md:text-base'>
-                    &copy;{t(content.footer.companyLabel)}
+                    &copy;{i18n.t(content.footer.companyLabel)}
                 </p>
 
                 <div className='flex justify-center space-x-6'>

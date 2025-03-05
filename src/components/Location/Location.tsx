@@ -7,9 +7,11 @@ import {
     CoordinatesProps,
     LocationDataProps,
 } from '../../interfaces/interfaces';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 const Location: React.FC = () => {
+    const { i18n } = useTranslation();
+
     const data: LocationDataProps = locationMock;
     const coordinates: CoordinatesProps = {
         lat: 39.2337,
@@ -57,7 +59,7 @@ const Location: React.FC = () => {
         >
             <div className='text-center lg:w-1/2 p-[1rem]'>
                 <h1 className='mb-[1rem] font-bold text-4xl '>
-                    {t(content.location.title)}
+                    {i18n.t(content.location.title)}
                 </h1>
             </div>
             <div className='bg-primary shadow-shadow shadow-xl rounded-lg overflow-hidden w-80 md:w-full'>
@@ -82,30 +84,30 @@ const Location: React.FC = () => {
                         <div className='p-4 grid md:grid-cols-2 gap-4 '>
                             <div>
                                 <h2 className='font-bold text-xl lg:text-2xl text-primaryText mt-4 md:mt-0'>
-                                    {t(content.location.contactLabel)}
+                                    {i18n.t(content.location.contactLabel)}
                                 </h2>
                                 <p className='mt-2 text-primaryText'>
                                     <strong>
-                                        {t(content.location.addressLabel)}
+                                        {i18n.t(content.location.addressLabel)}
                                     </strong>{' '}
                                     {data.address}
                                 </p>
                                 <p className='text-primaryText'>
                                     <strong>
-                                        {t(content.location.phoneLabel)}
+                                        {i18n.t(content.location.phoneLabel)}
                                     </strong>{' '}
                                     {data.phone}
                                 </p>
                                 <p className='text-primaryText'>
                                     <strong>
-                                        {t(content.location.emailLabel)}
+                                        {i18n.t(content.location.emailLabel)}
                                     </strong>{' '}
                                     {data.email}
                                 </p>
                             </div>
                             <div>
                                 <h3 className='font-semibold text-lg lg:text-2xl text-primaryText mt-4 md:mt-0'>
-                                    {t(content.location.scheduleLabel)}
+                                    {i18n.t(content.location.scheduleLabel)}
                                 </h3>
                                 <ul className='mt-2 text-primaryText'>
                                     {data.schedule.map((item, index) => (
@@ -114,7 +116,7 @@ const Location: React.FC = () => {
                                             className='grid grid-cols-[1fr_2fr] lg:pb-[1rem]'
                                         >
                                             <span className='font-bold'>
-                                                {t(item.day)}:
+                                                {i18n.t(item.day)}:
                                             </span>
                                             <span>{item.hours}</span>
                                         </li>

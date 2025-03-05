@@ -35,5 +35,16 @@
     "Mixed Greens, Tofu, Cucumber, Carrot, Edamame, Avocado, Ginger Dressing, Roasted Peanuts.": "Mixed Greens, Tofu, Cucumber, Carrot, Edamame, Avocado, Ginger Dressing, Roasted Peanuts.",
     "Mixed Greens, Grilled BBQ Chicken, Corn, Avocado, Red Bell Peppers, Cilantro, BBQ Sauce.": "Mixed Greens, Grilled BBQ Chicken, Corn, Avocado, Red Bell Peppers, Cilantro, BBQ Sauce.",
     "Mixed Greens, Grilled Salmon, Pineapple, Cucumber, Red Onion, Sesame Dressing, Toasted Coconut.": "Mixed Greens, Grilled Salmon, Pineapple, Cucumber, Red Onion, Sesame Dressing, Toasted Coconut.",
-    "Mixed Greens, Roasted Chickpeas, Beetroot, Cucumber, Quinoa, Avocado, Tahini Dressing.": "Mixed Greens, Roasted Chickpeas, Beetroot, Cucumber, Quinoa, Avocado, Tahini Dressing."
+    "Mixed Greens, Roasted Chickpeas, Beetroot, Cucumber, Quinoa, Avocado, Tahini Dressing.": "Mixed Greens, Roasted Chickpeas, Beetroot, Cucumber, Quinoa, Avocado, Tahini Dressing.",
+    "Monday": "Monday", 
+    "Tuesday": "Tuesday", 
+    "Wednesday": "Wednesday", 
+    "Thursday": "Thursday", 
+    "Friday": "Friday", 
+    "Saturday": "Saturday", 
+    "Sunday": "Sunday", 
+    "Closed": "Closed",
+    "Language": "Language",
+    "English": "English",
+    "Spanish": "Spanish"
 }

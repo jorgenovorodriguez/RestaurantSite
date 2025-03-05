@@ -3,7 +3,9 @@ export const content = {
     header: {
         title: 'BUDDHA BOWL',
         navItems: ['Home', 'Menu', 'About'],
-        darkMode: 'Dark mode'
+        darkMode: 'Dark mode',
+        languageLabel: 'Language',
+        languages: ['English', 'Spanish']
     },
     hero: {
       title: "Healthy & Authentic Vietnamese Bowls",

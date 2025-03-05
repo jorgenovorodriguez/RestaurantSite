@@ -45,5 +45,8 @@
     "Friday": "Viernes", 
     "Saturday": "Sabado", 
     "Sunday": "Domingo", 
-    "Closed": "Cerrado"
+    "Closed": "Cerrado",
+    "Language": "Idioma",
+    "English": "Inglés",
+    "Spanish": "Español"
 }

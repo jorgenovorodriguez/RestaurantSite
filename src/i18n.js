@@ -18,7 +18,7 @@ i18n.use(detector)
     .init({
         resources,
         lng: localStorage.getItem('I18N_LANGUAGE'),
-        fallbackLng: 'es',
+        fallbackLng: 'en',
 
         keySeparator: false,
 
@@ -27,7 +27,7 @@ i18n.use(detector)
         },
 
         detection: {
-            order: ['navigator', 'localStorage', 'cookie'],
+            order: ['localStorage', 'navigator', 'cookie'],
             caches: ['localStorage', 'cookie'],
         },
     });
